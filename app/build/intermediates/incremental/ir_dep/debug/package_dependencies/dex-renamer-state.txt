@@ -1,0 +1,4 @@
+#Sat May 18 13:31:19 BDT 2019
+base.0=/mnt/Software/Project/AppsLocker/app/build/intermediates/transforms/dexMerger/debug/10
+path.0=classes.dex
+renamed.0=classes.dex

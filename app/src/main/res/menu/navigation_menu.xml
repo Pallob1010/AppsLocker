@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/all_apps"
+        android:icon="@drawable/appslist"
+        android:title="All Apps" />
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/settings"
+        android:title="Settings" />
+    <item android:title="Lock">
+        <menu >
+            <item
+                android:id="@+id/lock_type"
+                android:icon="@drawable/lock_type"
+                android:title="Change Lock Type" />
+
+            <item
+                android:id="@+id/change_pattern"
+                android:icon="@drawable/all_apps"
+                android:title="Change Pattern" />
+            <item
+                android:id="@+id/change_pin"
+                android:icon="@drawable/change_pin"
+                android:title="Change Pin" />
+
+
+        </menu>
+    </item>
+    <item android:title="Others">
+
+        <menu>
+            <item
+                android:id="@+id/about"
+                android:icon="@drawable/about"
+                android:title="About" />
+            <item
+                android:id="@+id/exit"
+                android:icon="@drawable/exit"
+                android:title="Exit" />
+
+        </menu>
+    </item>
+
+
+
+
+</menu>

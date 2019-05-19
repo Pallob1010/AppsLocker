@@ -1,0 +1,174 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:2:1-22:12
+MERGED from [com.android.support:design:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/6889205b4150fb73a21fd4777a312424/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/pallob/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/9ae19562b89c876a113f714dbb7f2386/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/25defef4fb254450e270881ba760cb36/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/6ad36baf810e0c1ca7025773ce68f286/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/e684820b79aa4633a38a964c5111c74c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/09ab82a030dcdeb0a8b451c51427d535/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/44f608d5ef5a829c18df1690006a1eb7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/e6e23434610fe340c98d6564c702aabe/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/2e0c0a133a01b1bc3af9783f249f331e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/94f5d50838aa0e0e65f3ca9c1a64217b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/b20908fec0bc923348661cc95577c9e1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/7b3d7b8ac0d2239b4b4e9f8c076c2ab5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/bd9a440f6673d3d84e000deb24fae5e5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/9b4ee1404acf6a54840c1483f540345b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/c15c549c78468c1892e78848d90a1f53/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/74a3a50d6791c255ba34739c1fb92c95/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/f61f1c3cc9c2f945a449a70b7c3e083d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a8d0c86bbb3aef23fa978ea2eee4fc0c/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/4bdd01e4a1c1f806a4c3d24b9bfb04a3/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/185420746f22cee659b177da92598ee2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/492fe12b34a8d6e20279826e60a7f032/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/pallob/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/268266d5e2db6b070c6ca92221013887/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/15c3914f3f75af8d82427baa0a4c510b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/70e3d6e4d696af88e8f1da276a8eaf29/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/2c615a3bc160b84ca4266e9531fecdee/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/pallob/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/088e43a2052221314d31ea9b9e321853/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/273cdc8aea736dbc89905962669b64cd/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/pallob/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/69e822651cb6d15171cbde00f0f771bc/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/pallob/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/4282a6dffc8f2f3b028ecf14a727f328/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /home/pallob/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/71a8790f8dd672c04e53365a61e2c579/AndroidManifest.xml:17:1-22:12
+INJECTED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:2:1-22:12
+	package
+		ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:3:5-36
+		INJECTED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml
+		INJECTED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml
+		ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:2:1-22:12
+		INJECTED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml
+		ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:2:1-22:12
+		INJECTED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:4:5-77
+	android:name
+		ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:4:22-75
+application
+ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:6:5-20:19
+MERGED from [com.android.support:design:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/6889205b4150fb73a21fd4777a312424/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/6889205b4150fb73a21fd4777a312424/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/pallob/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/9ae19562b89c876a113f714dbb7f2386/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/pallob/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/9ae19562b89c876a113f714dbb7f2386/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a8d0c86bbb3aef23fa978ea2eee4fc0c/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a8d0c86bbb3aef23fa978ea2eee4fc0c/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/4bdd01e4a1c1f806a4c3d24b9bfb04a3/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/4bdd01e4a1c1f806a4c3d24b9bfb04a3/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a8d0c86bbb3aef23fa978ea2eee4fc0c/AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:9:9-41
+	android:icon
+		ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:8:9-47
+	android:allowBackup
+		ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:7:9-35
+	android:theme
+		ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:11:9-40
+activity#spark.loop.appslocker.MainActivity
+ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:12:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:16:27-74
+service#spark.loop.appslocker.BackgroundService
+ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:19:9-53
+	android:name
+		ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:19:18-51
+uses-sdk
+INJECTED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml
+INJECTED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/6889205b4150fb73a21fd4777a312424/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/6889205b4150fb73a21fd4777a312424/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/pallob/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/9ae19562b89c876a113f714dbb7f2386/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/pallob/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/9ae19562b89c876a113f714dbb7f2386/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/25defef4fb254450e270881ba760cb36/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/25defef4fb254450e270881ba760cb36/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/6ad36baf810e0c1ca7025773ce68f286/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/6ad36baf810e0c1ca7025773ce68f286/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/e684820b79aa4633a38a964c5111c74c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/e684820b79aa4633a38a964c5111c74c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/09ab82a030dcdeb0a8b451c51427d535/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/09ab82a030dcdeb0a8b451c51427d535/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/44f608d5ef5a829c18df1690006a1eb7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/44f608d5ef5a829c18df1690006a1eb7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/e6e23434610fe340c98d6564c702aabe/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/e6e23434610fe340c98d6564c702aabe/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/2e0c0a133a01b1bc3af9783f249f331e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/2e0c0a133a01b1bc3af9783f249f331e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/94f5d50838aa0e0e65f3ca9c1a64217b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/94f5d50838aa0e0e65f3ca9c1a64217b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/b20908fec0bc923348661cc95577c9e1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/b20908fec0bc923348661cc95577c9e1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/7b3d7b8ac0d2239b4b4e9f8c076c2ab5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/7b3d7b8ac0d2239b4b4e9f8c076c2ab5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/bd9a440f6673d3d84e000deb24fae5e5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/bd9a440f6673d3d84e000deb24fae5e5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/9b4ee1404acf6a54840c1483f540345b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/9b4ee1404acf6a54840c1483f540345b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/c15c549c78468c1892e78848d90a1f53/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/c15c549c78468c1892e78848d90a1f53/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/74a3a50d6791c255ba34739c1fb92c95/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/74a3a50d6791c255ba34739c1fb92c95/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/f61f1c3cc9c2f945a449a70b7c3e083d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/f61f1c3cc9c2f945a449a70b7c3e083d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a8d0c86bbb3aef23fa978ea2eee4fc0c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a8d0c86bbb3aef23fa978ea2eee4fc0c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/4bdd01e4a1c1f806a4c3d24b9bfb04a3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/4bdd01e4a1c1f806a4c3d24b9bfb04a3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/185420746f22cee659b177da92598ee2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/185420746f22cee659b177da92598ee2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/492fe12b34a8d6e20279826e60a7f032/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/492fe12b34a8d6e20279826e60a7f032/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/pallob/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/268266d5e2db6b070c6ca92221013887/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/pallob/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/268266d5e2db6b070c6ca92221013887/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/15c3914f3f75af8d82427baa0a4c510b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/15c3914f3f75af8d82427baa0a4c510b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/70e3d6e4d696af88e8f1da276a8eaf29/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/70e3d6e4d696af88e8f1da276a8eaf29/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/2c615a3bc160b84ca4266e9531fecdee/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/2c615a3bc160b84ca4266e9531fecdee/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/pallob/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/088e43a2052221314d31ea9b9e321853/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/pallob/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/088e43a2052221314d31ea9b9e321853/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/273cdc8aea736dbc89905962669b64cd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/pallob/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/273cdc8aea736dbc89905962669b64cd/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/pallob/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/69e822651cb6d15171cbde00f0f771bc/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/pallob/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/69e822651cb6d15171cbde00f0f771bc/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/pallob/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/4282a6dffc8f2f3b028ecf14a727f328/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/pallob/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/4282a6dffc8f2f3b028ecf14a727f328/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/pallob/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/71a8790f8dd672c04e53365a61e2c579/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/pallob/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/71a8790f8dd672c04e53365a61e2c579/AndroidManifest.xml:20:5-44
+INJECTED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml
+INJECTED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml
+		ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml
+		INJECTED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml
+		ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml
+		INJECTED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml
