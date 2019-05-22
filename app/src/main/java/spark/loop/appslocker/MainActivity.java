@@ -1,5 +1,4 @@
 package spark.loop.appslocker;
-
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -11,31 +10,44 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import Fragments.About;
 import Fragments.AllApps;
 import Fragments.Settings;
+import LockSavingRemoving.SharedPreference;
+import expandablerecyclerview.Apps;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, CompoundButton.OnCheckedChangeListener {
     FragmentManager fragmentManager;
     ActionBarDrawerToggle toggle;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     boolean v = false;
+    SharedPreference sharedPreference;
+    TextView textViewlock;
+    Apps apps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        apps=new Apps(this);
         setContentView(R.layout.activity_main);
+        sharedPreference = new SharedPreference(this);
         drawerLayout = findViewById(R.id.drawerlayout);
+        AllApps();
         navigationView = findViewById(R.id.navigationView);
         toggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.Open, R.string.Close);
         navigationView.setNavigationItemSelectedListener(this);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        AllApps();
+
+        OnOffSwitch(navigationView);
     }
 
     @Override
@@ -73,8 +85,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (menuItem.getItemId()) {
 
             case R.id.all_apps:
-                AllApps();
                 drawerLayout.closeDrawers();
+                AllApps();
                 return true;
             case R.id.change_pattern:
                 Toast.makeText(MainActivity.this, "A", Toast.LENGTH_SHORT).show();
@@ -105,8 +117,45 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        if (isChecked) {
+            buttonView.setText("Locked");
+            textViewlock.setBackgroundResource(R.drawable.lock_all);
+            sharedPreference.On();
+        } else {
+            buttonView.setText("Unlocked");
+            textViewlock.setBackgroundResource(R.drawable.unlock_all);
+            sharedPreference.Off();
+        }
+
+
+    }
+
+    public void OnOffSwitch(NavigationView navigationView) {
+        View view = navigationView.getHeaderView(0);
+        Switch aSwitch = view.findViewById(R.id.toggleSwitch);
+        textViewlock = view.findViewById(R.id.textView);
+        aSwitch.setOnCheckedChangeListener(this);
+
+        if (sharedPreference.isRunning()) {
+            aSwitch.setChecked(true);
+            aSwitch.setText("Locked");
+            textViewlock.setBackgroundResource(R.drawable.lock_all);
+        } else {
+            aSwitch.setChecked(false);
+            aSwitch.setText("Unlocked");
+            textViewlock.setBackgroundResource(R.drawable.unlock_all);
+        }
+
+
+    }
+
+
+
     public void AllApps() {
-        AllApps allApps = new AllApps();
+        AllApps allApps = new AllApps(MainActivity.this,apps);
         fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frameLayout, allApps);

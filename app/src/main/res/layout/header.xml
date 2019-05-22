@@ -3,27 +3,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
-    android:background="@color/colorPrimary"
+    android:layout_height="wrap_content"
+    android:background="@drawable/switchback"
     >
 
-    <ImageSwitcher
-        android:id="@+id/imageSwitcher"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:layout_constraintEnd_toEndOf="parent"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/unlock_all"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/toggleSwitch"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Switch
         android:id="@+id/toggleSwitch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textOn="Locked"
-        android:textOff="Unlocked"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/switchback"
+        android:paddingLeft="20dp"
+        android:paddingRight="40dp"
+        android:text="@string/unlocked"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:track="@drawable/strack"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageSwitcher" />
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:paddingStart="20dp"
+        android:paddingEnd="40dp" />
 
 </android.support.constraint.ConstraintLayout>

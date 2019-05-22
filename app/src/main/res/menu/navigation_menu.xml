@@ -3,41 +3,41 @@
     <item
         android:id="@+id/all_apps"
         android:icon="@drawable/appslist"
-        android:title="All Apps" />
+        android:title="@string/all_apps" />
     <item
         android:id="@+id/settings"
         android:icon="@drawable/settings"
-        android:title="Settings" />
-    <item android:title="Lock">
+        android:title="@string/settings" />
+    <item android:title="@string/lock">
         <menu >
             <item
                 android:id="@+id/lock_type"
                 android:icon="@drawable/lock_type"
-                android:title="Change Lock Type" />
+                android:title="@string/change_lock_type" />
 
             <item
                 android:id="@+id/change_pattern"
                 android:icon="@drawable/all_apps"
-                android:title="Change Pattern" />
+                android:title="@string/change_pattern" />
             <item
                 android:id="@+id/change_pin"
                 android:icon="@drawable/change_pin"
-                android:title="Change Pin" />
+                android:title="@string/change_pin" />
 
 
         </menu>
     </item>
-    <item android:title="Others">
+    <item android:title="@string/others">
 
         <menu>
             <item
                 android:id="@+id/about"
                 android:icon="@drawable/about"
-                android:title="About" />
+                android:title="@string/about" />
             <item
                 android:id="@+id/exit"
                 android:icon="@drawable/exit"
-                android:title="Exit" />
+                android:title="@string/exit" />
 
         </menu>
     </item>
