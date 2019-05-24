@@ -17,8 +17,7 @@ import android.util.Pair;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
-
-import spark.loop.appslocker.R;
+import com.loop.appslocker.R;
 
 
 public class PatternLockView extends ViewGroup {

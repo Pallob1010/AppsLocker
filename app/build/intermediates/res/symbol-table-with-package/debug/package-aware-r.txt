@@ -1,4 +1,4 @@
-spark.loop.appslocker
+com.loop.appslocker
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -567,6 +567,8 @@ bool abc_action_bar_embed_tabs
 bool abc_allow_stacked_button_bar
 bool abc_config_actionMenuItemAllCaps
 bool mtrl_btn_textappearance_all_caps
+color Ash
+color White
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -1041,6 +1043,7 @@ drawable strack
 drawable switchback
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable transparent
 drawable unlock_all
 id ALT
 id CTRL
@@ -1073,7 +1076,7 @@ id alertTitle
 id all
 id all_apps
 id always
-id appstypetextview
+id appsCategorieTextView
 id async
 id auto
 id barrier
@@ -1173,7 +1176,7 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
-id recyclerViewofApps
+id recyclerView
 id right
 id right_icon
 id right_side
@@ -1309,7 +1312,6 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout about
 layout activity_main
-layout all_apps
 layout appscategories
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1341,7 +1343,6 @@ layout select_dialog_singlechoice_material
 layout settings
 layout singleappsview
 layout support_simple_spinner_dropdown_item
-layout systemrecyclerblock
 menu navigation_menu
 menu top
 string Close
