@@ -82,32 +82,6 @@ public class Apps {
     }
 
 
-    public Drawable getappsIcon(String packagename) {
 
-
-        Drawable drawable;
-
-        try {
-            drawable = context.getPackageManager().getApplicationIcon(packagename);
-
-        } catch (PackageManager.NameNotFoundException e) {
-            drawable = ContextCompat.getDrawable(context, R.drawable.ic_launcher);
-        }
-        return drawable;
-    }
-
-    public String getappsName(String packagename) {
-        String Name = "";
-
-        try {
-            applicationInfo = context.getPackageManager().getApplicationInfo(packagename, 0);
-            if (applicationInfo != null) {
-                Name = (String) context.getPackageManager().getApplicationLabel(applicationInfo);
-            }
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
-        return Name;
-    }
 
 }

@@ -9,6 +9,7 @@ import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class SharedPreference {
@@ -16,19 +17,18 @@ public class SharedPreference {
     Context context;
     PackageManager packageManager;
     SharedPreferences preferences;
+    List<String>lockedapp,empty;
 
-    public SharedPreference() {
-
-    }
 
     public SharedPreference(Context context) {
         this.context = context;
-        preferences = context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE);
-        if (!preferences.contains(Constants.SPARSEARRAY)) {
-            createState();
-        }
+        lockedapp=new ArrayList<>();
+    }
 
-
+    public void saveRunningState(boolean var) {
+        SharedPreferences.Editor editor = context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE).edit();
+        editor.putBoolean(Constants.APPS_RUNNING, var);
+        editor.commit();
     }
 
     public void saveLockState(boolean var) {
@@ -36,27 +36,56 @@ public class SharedPreference {
         SharedPreferences.Editor editor;
         saveLockState = context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE);
         editor = saveLockState.edit();
-        editor.putBoolean(Constants.LOCKED_STATE, var);
+        editor.putBoolean(Constants.ALL_APPS_LOCKED, var);
         editor.commit();
     }
 
 
     public void On() {
-        saveLockState(true);
+        saveRunningState(true);
     }
 
     public void Off() {
-        saveLockState(false);
+        saveRunningState(false);
     }
+
+    public void unLockAll() {
+        SparseBooleanArray booleanArray=new SparseBooleanArray();
+        createState(booleanArray);
+        saveLockState(false);
+        empty=new ArrayList<>();
+        saveLockedApp(empty);
+
+
+    }
+
+    public void lockAll(int size, ArrayList<Apps> list) {
+        saveLockState(true);
+        SparseBooleanArray booleanArray=new SparseBooleanArray();
+        for (int i=0;i<size;i++){
+            booleanArray.put(i,true);
+            lockedapp.add(list.get(i).getPackageName());
+        }
+        createState(booleanArray);
+        saveLockedApp(lockedapp);
+
+    }
+
+    public boolean isAllLocked() {
+        SharedPreferences getstate;
+        getstate = context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE);
+        return getstate.getBoolean(Constants.ALL_APPS_LOCKED,false);
+    }
+
 
     public boolean isRunning() {
         SharedPreferences getstate;
         getstate = context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE);
-        if (!getstate.contains(Constants.LOCKED_STATE)) {
+        if (!getstate.contains(Constants.APPS_RUNNING)) {
             Off();
 
         }
-        return getstate.getBoolean(Constants.LOCKED_STATE, false);
+        return getstate.getBoolean(Constants.APPS_RUNNING, false);
     }
 
 
@@ -109,27 +138,32 @@ public class SharedPreference {
         SparseBooleanArray booleanArray;
         SharedPreferences preferences;
         preferences = context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE);
-        booleanArray = new Gson().fromJson(preferences.getString(Constants.SPARSEARRAY, ""), SparseBooleanArray.class);
+        if (!preferences.contains(Constants.SPARSEARRAY)) {
+            booleanArray = new SparseBooleanArray();
+            createState(booleanArray);
+
+        } else {
+            booleanArray = new Gson().fromJson(preferences.getString(Constants.SPARSEARRAY, ""), SparseBooleanArray.class);
+
+        }
         return booleanArray;
 
     }
 
     public void changeStateTo(boolean value, int position) {
-        SparseBooleanArray booleanArray=getState();
+        SparseBooleanArray booleanArray = getState();
         SharedPreferences.Editor editor = context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE).edit();
-        booleanArray.put(position,value);
-        editor.putString(Constants.SPARSEARRAY,new Gson().toJson(booleanArray));
-        editor.commit();
-    }
-
-
-    public void createState() {
-        SparseBooleanArray booleanArray = new SparseBooleanArray();
-        SharedPreferences.Editor editor = context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE).edit();
+        booleanArray.put(position, value);
         editor.putString(Constants.SPARSEARRAY, new Gson().toJson(booleanArray));
         editor.commit();
     }
 
+    public void createState(SparseBooleanArray booleanArray) {
+
+        SharedPreferences.Editor editor = context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE).edit();
+        editor.putString(Constants.SPARSEARRAY, new Gson().toJson(booleanArray));
+        editor.commit();
+    }
 
     public void savePasswordPattern(String password) {
         SharedPreferences passwordPattern;

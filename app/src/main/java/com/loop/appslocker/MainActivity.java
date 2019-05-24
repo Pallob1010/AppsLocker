@@ -11,7 +11,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -20,11 +19,12 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.Adapters.MultiViewTypeAdapter;
 import com.Fragments.About;
 import com.Fragments.Settings;
-import com.LockSavingRemoving.SharedPreference;
 import com.LockSavingRemoving.Apps;
+import com.LockSavingRemoving.SharedPreference;
 
 import java.util.ArrayList;
 
@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     TextView textViewlock;
     Apps apps;
     RecyclerView recyclerView;
-
-
+    MultiViewTypeAdapter adapter;
+    ArrayList<Apps>list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,13 +54,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        recyclerView=findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        ArrayList<Apps>list=apps.allAppsArrayList();
-        MultiViewTypeAdapter adapter=new MultiViewTypeAdapter(list,this);
+         list = apps.allAppsArrayList();
+        adapter = new MultiViewTypeAdapter(list, this,sharedPreference);
         recyclerView.setAdapter(adapter);
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-
         OnOffSwitch(navigationView);
     }
 
@@ -69,6 +68,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.top, menu);
+        MenuItem item=menu.findItem(R.id.unlock_all);
+        if (sharedPreference.isAllLocked()) {
+            item.setIcon(R.drawable.lock_all);
+        } else {
+            item.setIcon(R.drawable.unlock_all);
+        }
         return true;
     }
 
@@ -81,15 +86,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (item.getItemId()) {
 
             case R.id.unlock_all:
-                if (v) {
-                    item.setIcon(R.drawable.unlock_all);
-                    v = false;
-                } else {
+                if (!sharedPreference.isAllLocked()) {
                     item.setIcon(R.drawable.lock_all);
-                    v = true;
+                    sharedPreference.lockAll(list.size(),list);
+                    adapter.notifyDataSetChanged();
+
+                } else {
+                    item.setIcon(R.drawable.unlock_all);
+                    sharedPreference.unLockAll();
+                    adapter.notifyDataSetChanged();
                 }
 
-                return true;
         }
 
         return super.onOptionsItemSelected(item);
@@ -101,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (menuItem.getItemId()) {
 
             case R.id.all_apps:
-                AllApps();
+                clearApps();
                 drawerLayout.closeDrawers();
                 return true;
             case R.id.change_pattern:
@@ -169,15 +176,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
-    public void AllApps() {
-       for (int i=0;i<getSupportFragmentManager().getBackStackEntryCount();i++){
-           getSupportFragmentManager().popBackStack();
-       }
+    public void clearApps() {
+        for (int i = 0; i < getSupportFragmentManager().getBackStackEntryCount(); i++) {
+            getSupportFragmentManager().popBackStack();
+        }
 
     }
 
     public void Settings() {
-
+        clearApps();
         Settings settings = new Settings();
         fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -187,6 +194,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void About() {
+        clearApps();
         About about = new About();
         fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -198,7 +206,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public void onBackPressed() {
-        if (getSupportFragmentManager().getBackStackEntryCount() >0) {
+        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
             getSupportFragmentManager().popBackStack();
         } else {
             super.onBackPressed();
