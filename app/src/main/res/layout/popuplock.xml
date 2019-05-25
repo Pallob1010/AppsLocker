@@ -18,6 +18,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:lineColor="#ff006699"
         app:lineWidth="8dp"
-        app:nodeOnSrc="@drawable/lock_9_view_node_highlighted"
-        app:nodeSrc="@drawable/lock_9_view_node_normal" />
+        app:nodeOnSrc="@drawable/white_highlight"
+        app:nodeSrc="@drawable/white_normal" />
 </android.support.constraint.ConstraintLayout>

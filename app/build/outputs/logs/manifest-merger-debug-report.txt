@@ -92,10 +92,10 @@ category#android.intent.category.LAUNCHER
 ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:16:17-77
 	android:name
 		ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:16:27-74
-service#com.Fragments.BackgroundService
-ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:19:9-66
+service#com.loop.appslocker.AppsLockerService
+ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:19:9-53
 	android:name
-		ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:19:18-64
+		ADDED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml:19:18-51
 uses-sdk
 INJECTED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /mnt/Software/Project/AppsLocker/app/src/main/AndroidManifest.xml

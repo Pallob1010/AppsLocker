@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
 
-        <service android:name="com.Fragments.BackgroundService" />
+        <service android:name="com.loop.appslocker.AppsLockerService" />
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"

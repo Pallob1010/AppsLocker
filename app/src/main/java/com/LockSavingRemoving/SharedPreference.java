@@ -9,7 +9,6 @@ import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class SharedPreference {
@@ -17,12 +16,12 @@ public class SharedPreference {
     Context context;
     PackageManager packageManager;
     SharedPreferences preferences;
-    List<String>lockedapp,empty;
+    List<String> lockedapp, empty;
 
 
     public SharedPreference(Context context) {
         this.context = context;
-        lockedapp=new ArrayList<>();
+        lockedapp = new ArrayList<>();
     }
 
     public void saveRunningState(boolean var) {
@@ -50,10 +49,10 @@ public class SharedPreference {
     }
 
     public void unLockAll() {
-        SparseBooleanArray booleanArray=new SparseBooleanArray();
+        SparseBooleanArray booleanArray = new SparseBooleanArray();
         createState(booleanArray);
         saveLockState(false);
-        empty=new ArrayList<>();
+        empty = new ArrayList<>();
         saveLockedApp(empty);
 
 
@@ -61,9 +60,9 @@ public class SharedPreference {
 
     public void lockAll(int size, ArrayList<Apps> list) {
         saveLockState(true);
-        SparseBooleanArray booleanArray=new SparseBooleanArray();
-        for (int i=0;i<size;i++){
-            booleanArray.put(i,true);
+        SparseBooleanArray booleanArray = new SparseBooleanArray();
+        for (int i = 0; i < size; i++) {
+            booleanArray.put(i, true);
             lockedapp.add(list.get(i).getPackageName());
         }
         createState(booleanArray);
@@ -74,7 +73,7 @@ public class SharedPreference {
     public boolean isAllLocked() {
         SharedPreferences getstate;
         getstate = context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE);
-        return getstate.getBoolean(Constants.ALL_APPS_LOCKED,false);
+        return getstate.getBoolean(Constants.ALL_APPS_LOCKED, false);
     }
 
 
@@ -201,4 +200,14 @@ public class SharedPreference {
         }
         return "";
     }
+
+    public void saveLockType(int type) {
+        SharedPreferences.Editor editor = context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE).edit();
+        editor.putInt(Constants.LOCKED_TYPE,type).commit();
+    }
+
+    public int getLockType(){
+        return (context.getSharedPreferences(Constants.APPS_PREFERENCE,Context.MODE_PRIVATE).getInt(Constants.LOCKED_TYPE,3));
+    }
+
 }
