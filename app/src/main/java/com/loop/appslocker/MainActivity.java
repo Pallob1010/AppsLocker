@@ -31,6 +31,7 @@ import android.widget.Toast;
 import com.Adapters.MultiViewTypeAdapter;
 import com.Fragments.About;
 import com.Fragments.SetPatternLock;
+import com.Fragments.SetPinLock;
 import com.Fragments.Settings;
 import com.Listener.BackListener;
 import com.LockSavingRemoving.Apps;
@@ -129,7 +130,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 drawerLayout.closeDrawers();
                 return true;
             case R.id.change_pin:
-                Toast.makeText(MainActivity.this, "A", Toast.LENGTH_SHORT).show();
+                SetPin();
                 drawerLayout.closeDrawers();
                 return true;
             case R.id.lock_type:
@@ -260,11 +261,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void SetPattern() {
         clearApps();
         BackListener backListener=this;
-        SetPatternLock setPatternLock = new SetPatternLock(backListener);
+        SetPatternLock setPatternLock = new SetPatternLock(backListener,this);
         fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frameLayout, setPatternLock);
         fragmentTransaction.addToBackStack("setPattern");
+        fragmentTransaction.commit();
+
+    }
+    public void SetPin(){
+        clearApps();
+        BackListener backListener=this;
+        SetPinLock setPinLock = new SetPinLock(backListener,this);
+        fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frameLayout, setPinLock);
+        fragmentTransaction.addToBackStack("setPinLock");
         fragmentTransaction.commit();
 
     }

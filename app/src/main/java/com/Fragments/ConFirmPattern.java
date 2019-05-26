@@ -1,14 +1,17 @@
 package com.Fragments;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.LockSavingRemoving.SharedPreference;
 import com.lock.PatternLockView;
 import com.loop.appslocker.R;
 
@@ -17,11 +20,12 @@ public class ConFirmPattern extends Fragment implements View.OnClickListener {
 
     View view;
     PatternLockView patternLockView;
-    Button Back, Confirm;
+    TextView Back;
     String recievedPattern, ConFirmPattern;
-
-    public ConFirmPattern(String recievedPattern) {
+    SharedPreference preference;
+    public ConFirmPattern(String recievedPattern, Context context) {
         this.recievedPattern = recievedPattern;
+        preference=new SharedPreference(context);
     }
 
     @Override
@@ -29,14 +33,20 @@ public class ConFirmPattern extends Fragment implements View.OnClickListener {
 
         view = inflater.inflate(R.layout.confirmpattern, container, false);
         patternLockView = view.findViewById(R.id.confirmPatternLockView);
-        Back = view.findViewById(R.id.pattern_back);
-        Confirm = view.findViewById(R.id.pattern_confirm);
-        Confirm.setOnClickListener(this);
+        Back = view.findViewById(R.id.confirm_back);
         Back.setOnClickListener(this);
         patternLockView.setCallBack(new PatternLockView.CallBack() {
             @Override
             public void onFinish(String conFirmPattern) {
-                ConFirmPattern = conFirmPattern;
+
+                if(recievedPattern.equals(conFirmPattern)){
+                    preference.savePasswordPattern(recievedPattern);
+                    Toast.makeText(getContext(), "Pattern Created", Toast.LENGTH_SHORT).show();
+                    clearApps(0);
+                }else {
+                    Toast.makeText(getContext(), "Pattern Doesn't Match", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 
@@ -45,26 +55,15 @@ public class ConFirmPattern extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.pattern_confirm:
-                if (recievedPattern.equals(ConFirmPattern)) {
-                    Toast.makeText(getContext(), "Pattern Created", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(getContext(), "Mismatch", Toast.LENGTH_SHORT).show();
-
-                }
-                break;
-            case R.id.pattern_back:
-                clearApps();
-                break;
-        }
-
+        clearApps(1);
     }
 
-    public void clearApps() {
-        for (int i = 1; i < getFragmentManager().getBackStackEntryCount(); i++) {
+    public void clearApps(int j) {
+        for (int i = j; i < getFragmentManager().getBackStackEntryCount(); i++) {
             getFragmentManager().popBackStack();
         }
+
     }
+
 
 }

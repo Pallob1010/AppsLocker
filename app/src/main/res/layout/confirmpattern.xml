@@ -6,11 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    android:id="@+id/confirmPatternRoot"
+    android:id="@+id/setPatternRoot"
     >
 
+
     <TextView
-        android:id="@+id/tvx"
+        android:id="@+id/createText32"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="4dp"
@@ -18,11 +19,12 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginRight="4dp"
-        android:background="@android:color/holo_orange_light"
+        android:background="@android:color/holo_green_light"
         android:gravity="center"
         android:text="@string/confirm_pattern"
         android:textColor="@android:color/black"
         android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -36,13 +38,14 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
         android:background="@color/Venta_Black"
-        app:layout_constraintBottom_toTopOf="@+id/pattern_back"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
 
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvx">
+        app:layout_constraintTop_toBottomOf="@+id/createText32">
 
         <com.lock.PatternLockView
 
@@ -53,56 +56,49 @@
             android:layout_marginLeft="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textofConfirm"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:nodeOnSrc="@drawable/red_highlighted"
-            app:nodeSrc="@drawable/white_normal"
+            app:lineColor="@color/colorAccent"
+            app:lineWidth="5dp"
             app:patternSize="3" />
 
+        <TextView
+            android:id="@+id/textofConfirm"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="@string/draw_to_confirm"
+            android:textColor="@color/White"
+            app:layout_constraintBottom_toTopOf="@+id/confirm_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirmPatternLockView" />
+
+        <TextView
+            android:id="@+id/confirm_back"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/allbuttonclick"
+            android:gravity="center"
+            android:text="@string/back"
+            android:textColor="@color/White"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textofConfirm" />
 
     </android.support.constraint.ConstraintLayout>
-
-
-    <Button
-        android:id="@+id/pattern_back"
-        android:layout_width="0dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="4dp"
-        android:background="@drawable/allbuttonclick"
-        android:text="@string/back"
-        android:textAllCaps="false"
-        android:textColor="@color/White"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/pattern_confirm"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
-
-    <Button
-        android:id="@+id/pattern_confirm"
-        android:layout_width="0dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginBottom="4dp"
-        android:background="@drawable/allbuttonclick"
-        android:text="@string/confirm"
-        android:textAllCaps="false"
-        android:textColor="@color/White"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/pattern_back"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
-
 
 
 </android.support.constraint.ConstraintLayout>

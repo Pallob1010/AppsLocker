@@ -1,10 +1,12 @@
 <?xml version = "1.0" encoding = "utf-8"?>
 <resources>
     <declare-styleable name = "PatternLockView">
-        <attr name = "nodeSrc" format = "color|reference"/>
-        <attr name = "nodeOnSrc" format = "color|reference"/>
+        <attr name = "nodeSrc" format = "integer"/>
+        <attr name = "nodeOnSrc" format = "integer"/>
         <attr name = "lineColor" format = "color"/>
         <attr name = "lineWidth" format = "dimension"/>
         <attr name="patternSize" format="integer"/>
     </declare-styleable>
+
+
 </resources>

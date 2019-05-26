@@ -1,8 +1,6 @@
 package com.lock;
+
 import android.content.Context;
-import android.view.ViewGroup;
-import java.util.ArrayList;
-import java.util.List;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -10,75 +8,80 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Paint.Style;
 import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.Pair;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Toast;
+import android.view.ViewGroup;
+
 import com.loop.appslocker.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class PatternLockView extends ViewGroup {
     private Paint paint;
     private Bitmap bitmap;
     private Canvas canvas;
-
     private List<Pair<NodeView, NodeView>> lineList;
     private NodeView currentNode;
-
     private StringBuilder stringbuilder;
     private CallBack callBack;
     private int patternLockSize;
-    int normal[]={R.drawable.white_normal};
-    private Drawable getNodeSrc() {
+    private int nodeSrc, nodeOnSrc;
+    private int normal[] = {R.drawable.white_normal, R.drawable.green_normal, R.drawable.blue_normal, R.drawable.red_normal, R.drawable.black_normal};
+    private int highlighted[] = {R.drawable.white_highlight, R.drawable.green_high_lighted, R.drawable.blue_highlighted, R.drawable.red_highlighted, R.drawable.black_highlight};
+
+
+    public PatternLockView(Context context) {
+        this(context, null);
+    }
+
+    public PatternLockView(Context context, AttributeSet attrs) {
+        this(context, attrs, 0);
+    }
+
+
+    public PatternLockView(Context context, AttributeSet attrs, int defStyleAttr) {
+        this(context, attrs, defStyleAttr, 0);
+    }
+
+    public PatternLockView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr);
+        initFromAttributes(attrs, defStyleAttr);
+    }
+
+    public void setNodeAtNormal(int position) {
+        this.nodeSrc = normal[position];
+    }
+
+    public void setNodeOnHighlighted(int position) {
+        this.nodeOnSrc = highlighted[position];
+    }
+
+    private int getNodeSource() {
         return nodeSrc;
     }
 
-    public void setNodeViewAtNormal(int position) {
-        this.nodeSrc = nodeSrc;
-
-    }
-
-    private Drawable getNodeOnSrc() {
+    private int getNodeOnSource() {
         return nodeOnSrc;
     }
 
-    public void setNodeViewAtHighlight(Drawable nodeOnSrc) {
-        this.nodeOnSrc = nodeOnSrc;
-    }
-
-    private Drawable nodeSrc;
-    private Drawable nodeOnSrc;
-
-
     private int getPatternLockSize() {
-        return patternLockSize*patternLockSize;
+        return patternLockSize * patternLockSize;
     }
 
     public void setPatternLockSize(int patternLockSize) {
         this.patternLockSize = patternLockSize;
     }
 
-    public PatternLockView(Context context) {
-        this(context, null);
-    }
-    public PatternLockView(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
-    }
-    public PatternLockView(Context context, AttributeSet attrs, int defStyleAttr) {
-        this(context, attrs, defStyleAttr, 0);
-    }
-    public PatternLockView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr);
-        initFromAttributes(attrs, defStyleAttr);
-    }
     private void initFromAttributes(AttributeSet attrs, int defStyleAttr) {
         final TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.PatternLockView, defStyleAttr, 0);
-        patternLockSize=a.getInt(R.styleable.PatternLockView_patternSize,3);
-        nodeSrc = a.getDrawable(R.styleable.PatternLockView_nodeSrc);
-        nodeOnSrc = a.getDrawable(R.styleable.PatternLockView_nodeOnSrc);
+        patternLockSize = a.getInt(R.styleable.PatternLockView_patternSize, 3);
+        nodeSrc = a.getResourceId(R.styleable.PatternLockView_nodeSrc, R.drawable.white_normal);
+        nodeOnSrc = a.getResourceId(R.styleable.PatternLockView_nodeOnSrc, R.drawable.white_highlight);
         int lineColor = Color.argb(0, 0, 0, 0);
         lineColor = a.getColor(R.styleable.PatternLockView_lineColor, lineColor);
         float lineWidth = 20.0f;
@@ -93,7 +96,7 @@ public class PatternLockView extends ViewGroup {
         paint.setAntiAlias(true);
 
         DisplayMetrics dm = getResources().getDisplayMetrics();
-        bitmap = Bitmap.createBitmap(dm.widthPixels, dm.widthPixels,   Bitmap.Config.ARGB_8888);
+        bitmap = Bitmap.createBitmap(dm.widthPixels, dm.widthPixels, Bitmap.Config.ARGB_8888);
         canvas = new Canvas();
         canvas.setBitmap(bitmap);
         for (int n = 0; n < getPatternLockSize(); n++) {
@@ -101,7 +104,7 @@ public class PatternLockView extends ViewGroup {
             addView(node);
 
         }
-        lineList = new ArrayList<Pair<NodeView,NodeView>>();
+        lineList = new ArrayList<Pair<NodeView, NodeView>>();
         stringbuilder = new StringBuilder();
 
         setWillNotDraw(false);
@@ -111,6 +114,7 @@ public class PatternLockView extends ViewGroup {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         setMeasuredDimension(widthMeasureSpec, widthMeasureSpec);
     }
+
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         if (!changed) {
@@ -118,23 +122,25 @@ public class PatternLockView extends ViewGroup {
         }
         int width = right - left;
         int nodeWidth = (width / patternLockSize);
-        int nodePadding = nodeWidth/20;
+        int nodePadding = nodeWidth / 10;
 
-        for (int n = 0; n <getPatternLockSize() ; n++) {
+        for (int n = 0; n < getPatternLockSize(); n++) {
             NodeView node = (NodeView) getChildAt(n);
-           int row = n / patternLockSize;
+            int row = n / patternLockSize;
             int col = n % patternLockSize;
-            int l = col * nodeWidth + nodePadding;
-            int t = row * nodeWidth + nodePadding;
-            int r = col * nodeWidth + nodeWidth ;
-            int b = row * nodeWidth + nodeWidth ;
+            int l = col * nodeWidth + nodePadding - 10;
+            int t = row * nodeWidth + nodePadding - 10;
+            int r = col * nodeWidth + nodeWidth - 10;
+            int b = row * nodeWidth + nodeWidth - 10;
             node.layout(l, t, r, b);
         }
     }
+
     @Override
     protected void onDraw(Canvas canvas) {
         canvas.drawBitmap(bitmap, 0, 0, null);
     }
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 
@@ -150,8 +156,7 @@ public class PatternLockView extends ViewGroup {
                         currentNode = nodeAt;
                         currentNode.setHighLighted(true);
                         stringbuilder.append(currentNode.getNum());
-                    }
-                    else if (nodeAt == null || nodeAt.isHighLighted()) {
+                    } else if (nodeAt == null || nodeAt.isHighLighted()) {
 
                         canvas.drawLine(currentNode.getCenterX(), currentNode.getCenterY(), event.getX(), event.getY(), paint);
                     } else {
@@ -196,9 +201,10 @@ public class PatternLockView extends ViewGroup {
     private void clearScreenAndDrawList() {
         canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
         for (Pair<NodeView, NodeView> pair : lineList) {
-            canvas.drawLine(pair.first.getCenterX(), pair.first.getCenterY(),  pair.second.getCenterX(), pair.second.getCenterY(), paint);
+            canvas.drawLine(pair.first.getCenterX(), pair.first.getCenterY(), pair.second.getCenterX(), pair.second.getCenterY(), paint);
         }
     }
+
     private NodeView getNodeAt(float x, float y) {
 
         for (int n = 0; n < getChildCount(); n++) {
@@ -213,8 +219,13 @@ public class PatternLockView extends ViewGroup {
         }
         return null;
     }
+
     public void setCallBack(CallBack callBack) {
         this.callBack = callBack;
+    }
+
+    public interface CallBack {
+        void onFinish(String password);
     }
 
     public class NodeView extends View {
@@ -230,10 +241,10 @@ public class PatternLockView extends ViewGroup {
             this(context);
             this.num = num;
             highLighted = false;
-            if (nodeSrc == null) {
+            if (getNodeSource() == 0) {
                 setBackgroundResource(0);
             } else {
-                setBackgroundDrawable(nodeSrc);
+                setBackgroundResource(getNodeSource());
             }
         }
 
@@ -244,17 +255,17 @@ public class PatternLockView extends ViewGroup {
         public void setHighLighted(boolean highLighted) {
             this.highLighted = highLighted;
             if (highLighted) {
-                if (nodeOnSrc == null) {
+                if (getNodeOnSource() == 0) {
                     setBackgroundResource(0);
                 } else {
-                    setBackgroundDrawable(nodeOnSrc);
+                    setBackgroundResource(getNodeOnSource());
 
                 }
             } else {
-                if (nodeSrc == null) {
+                if (getNodeSource() == 0) {
                     setBackgroundResource(0);
                 } else {
-                    setBackgroundDrawable(nodeSrc);
+                    setBackgroundResource(getNodeSource());
                 }
             }
         }
@@ -274,8 +285,5 @@ public class PatternLockView extends ViewGroup {
         public void setNum(int num) {
             this.num = num;
         }
-    }
-    public interface CallBack {
-        void onFinish(String password);
     }
 }

@@ -38,14 +38,14 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
         android:background="@color/Venta_Black"
-        app:layout_constraintBottom_toTopOf="@+id/pattern_cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvx"
-
-        >
+        app:layout_constraintTop_toBottomOf="@+id/tvx">
 
         <com.lock.PatternLockView
 
@@ -56,57 +56,49 @@
             android:layout_marginLeft="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:nodeOnSrc="@drawable/red_highlighted"
-            app:nodeSrc="@drawable/white_normal"
+            app:lineColor="@color/colorAccent"
+            app:lineWidth="5dp"
             app:patternSize="3" />
 
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="@string/draw_pattern"
+            android:textColor="@color/White"
+            app:layout_constraintBottom_toTopOf="@+id/pattern_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createPatternLockView" />
+
+        <TextView
+            android:id="@+id/pattern_cancel"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/allbuttonclick"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/White"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text" />
 
     </android.support.constraint.ConstraintLayout>
-
-
-    <TextView
-        android:gravity="center"
-        android:id="@+id/pattern_cancel"
-        android:layout_width="0dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="4dp"
-        android:background="@drawable/allbuttonclick"
-        android:text="@string/cancel"
-        android:textAllCaps="false"
-        android:textColor="@color/White"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/pattern_next"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearlay" />
-
-    <TextView
-        android:gravity="center"
-        android:id="@+id/pattern_next"
-        android:layout_width="0dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginBottom="4dp"
-        android:background="@drawable/allbuttonclick"
-        android:text="@string/next"
-        android:textAllCaps="false"
-        android:textColor="@color/White"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/pattern_cancel"
-        app:layout_constraintTop_toBottomOf="@+id/linearlay" />
 
 
 </android.support.constraint.ConstraintLayout>

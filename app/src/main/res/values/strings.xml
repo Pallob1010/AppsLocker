@@ -22,4 +22,6 @@
     <string name="confirm_pattern">Confirm Pattern</string>
     <string name="back">Back</string>
     <string name="confirm">Confirm</string>
+    <string name="draw_pattern">Draw Pattern</string>
+    <string name="draw_to_confirm">Draw again to Confirm</string>
 </resources>

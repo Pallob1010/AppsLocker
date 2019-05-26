@@ -1107,13 +1107,14 @@ id clip_horizontal
 id clip_vertical
 id collapseActionView
 id confirmPatternLockView
-id confirmPatternRoot
+id confirm_back
 id constraintLayout
 id container
 id content
 id contentPanel
 id coordinator
 id createPatternLockView
+id createText32
 id custom
 id customPanel
 id decor_content_parent
@@ -1172,6 +1173,7 @@ id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
+id mypin
 id navigationView
 id navigation_header_container
 id never
@@ -1186,10 +1188,7 @@ id parallax
 id parent
 id parentPanel
 id parent_matrix
-id pattern_back
 id pattern_cancel
-id pattern_confirm
-id pattern_next
 id patternlockview
 id percent
 id pin
@@ -1225,6 +1224,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id setPatternRoot
+id setPinRoot
 id settings
 id shortcut
 id showCustom
@@ -1264,6 +1264,7 @@ id text_input_password_toggle
 id textinput_counter
 id textinput_error
 id textinput_helper_text
+id textofConfirm
 id time
 id title
 id titleDividerNoCustom
@@ -1368,6 +1369,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout setpatternlock
+layout setpinlock
 layout settings
 layout singleappsview
 layout support_simple_spinner_dropdown_item
@@ -1429,6 +1431,8 @@ string character_counter_pattern
 string confirm
 string confirm_pattern
 string create_pattern
+string draw_pattern
+string draw_to_confirm
 string exit
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
