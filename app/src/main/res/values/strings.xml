@@ -24,4 +24,10 @@
     <string name="confirm">Confirm</string>
     <string name="draw_pattern">Draw Pattern</string>
     <string name="draw_to_confirm">Draw again to Confirm</string>
+    <string name="enter_your_pin">Enter Your Pin</string>
+    <string name="create_pin">Create Pin </string>
+    <string name="set_your_pin_code">Set Your Pin Code</string>
+    <string name="confirm_pin">Confirm Pin</string>
+    <string name="type_your_pin_again">Type Your Pin Again</string>
+
 </resources>

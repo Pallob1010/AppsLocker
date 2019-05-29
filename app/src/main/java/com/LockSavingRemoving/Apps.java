@@ -4,12 +4,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import com.loop.appslocker.R;
@@ -21,7 +23,7 @@ public class Apps {
     SharedPreference preference;
     ArrayList<Apps> allAppsArrayList = new ArrayList<>();
     ArrayList<Apps> installedApps = new ArrayList<>();
-    private String packageName;
+    private String packageNamE;
 
     public int getType() {
         return type;
@@ -36,18 +38,18 @@ public class Apps {
     public Apps(Context context) {
         this.context=context;
         getAllApps();
-
+      //  GetApps();
     }
 
     public Apps(String packageName, int type,Context context) {
-        this.packageName = packageName;
+        this.packageNamE = packageName;
         this.context = context;
         this.type=type;
     }
 
 
     public String getPackageName() {
-        return packageName;
+        return packageNamE;
     }
 
     public ArrayList<Apps>allAppsArrayList() {
@@ -67,6 +69,7 @@ public class Apps {
             if (isSystemPackage(resolveInfo)) {
                 allAppsArrayList.add(new Apps(activityInfo.applicationInfo.packageName,Constants.SYSTEM_APPS,context));
             } else {
+                if (!activityInfo.applicationInfo.packageName.equals("com.loop.appslocker"))
                 installedApps.add(new Apps(activityInfo.applicationInfo.packageName,Constants.INSTALLED_APPS,context));
 
             }
@@ -78,10 +81,38 @@ public class Apps {
 
     public boolean isSystemPackage(ResolveInfo resolveInfo) {
 
-        return ((resolveInfo.activityInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) != 0);
+        return ((resolveInfo.activityInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) == 1);
+    }
+
+    private void GetApps(){
+        Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
+        mainIntent.addCategory(Intent.CATEGORY_LAUNCHER);
+        PackageManager packageManager=context.getPackageManager();
+        allAppsArrayList.add(new Apps("System Apps",Constants.SYSTEM_TITLE,context));
+        List<ResolveInfo> appList = packageManager.queryIntentActivities(mainIntent, 0);
+        Collections.sort(appList, new ResolveInfo.DisplayNameComparator(packageManager));
+        List<PackageInfo> packs = packageManager.getInstalledPackages(0);
+        for (int i = 0; i < packs.size(); i++) {
+            PackageInfo p = packs.get(i);
+            ApplicationInfo a = p.applicationInfo;
+
+            if ((a.flags & ApplicationInfo.FLAG_SYSTEM) == 1) {
+                 allAppsArrayList.add(new Apps(p.packageName,Constants.SYSTEM_APPS,context));
+            }else {
+                if (!p.packageName.equals("com.loop.appslocker"))
+                    installedApps.add(new Apps(p.packageName,Constants.INSTALLED_APPS,context));
+            }
+        }
+        allAppsArrayList.add(new Apps("Installed Apps",Constants.INSTALLED_TITLE,context));
+        allAppsArrayList.addAll(installedApps);
+
+
     }
 
 
 
 
+
+
 }
+

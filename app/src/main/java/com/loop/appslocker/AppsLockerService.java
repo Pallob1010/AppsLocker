@@ -20,24 +20,25 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import com.LockSavingRemoving.SharedPreference;
 import com.lock.PatternLockView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.LockSavingRemoving.SharedPreference;
-import com.loop.appslocker.R;
-
 
 public class AppsLockerService extends Service {
-
     public static String currentApp = "";
     public static String previousApp = "";
+    final Handler handler = new Handler();
     Dialog dialog;
     SharedPreference sharedPreference;
     List<String> pakageName;
-    long t = 100;
+    long t = 300;
+    ActivityManager activityManager;
+    List<ActivityManager.RunningTaskInfo> taskInfo;
     WindowManager windowManager;
     ImageView imageView;
     WindowManager.LayoutParams params;
@@ -46,9 +47,9 @@ public class AppsLockerService extends Service {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (intent.getAction().equals(Intent.ACTION_CLOSE_SYSTEM_DIALOGS)) {
-               if (dialog!=null){
-                   Home();
-               }
+                if (dialog != null) {
+                    Home();
+                }
             }
         }
     };
@@ -60,14 +61,12 @@ public class AppsLockerService extends Service {
         context = getApplicationContext();
         sharedPreference = new SharedPreference(context);
         pakageName = new ArrayList<>();
-        pakageName.add("spark.loop.callblocker");
-
-
+        activityManager = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
             params = new WindowManager.LayoutParams(
                     WindowManager.LayoutParams.WRAP_CONTENT,
                     WindowManager.LayoutParams.WRAP_CONTENT,
-                    WindowManager.LayoutParams.TYPE_PHONE,
+                    WindowManager.LayoutParams.TYPE_SYSTEM_OVERLAY,
                     WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
                     PixelFormat.TRANSLUCENT);
         } else {
@@ -85,14 +84,12 @@ public class AppsLockerService extends Service {
         params.gravity = Gravity.TOP | Gravity.CENTER;
         params.x = ((getApplicationContext().getResources().getDisplayMetrics().widthPixels) / 2);
         params.y = ((getApplicationContext().getResources().getDisplayMetrics().heightPixels) / 2);
-        windowManager.addView(imageView,params);
-
-        final Handler handler=new Handler();
+        windowManager.addView(imageView, params);
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                handler.postDelayed(this,t);
-                if(isAppsRunning()){
+                handler.postDelayed(this, t);
+                if (isAppsRunning()) {
 
                     if (imageView != null) {
 
@@ -101,7 +98,7 @@ public class AppsLockerService extends Service {
                             previousApp = currentApp;
                         }
                     }
-                }else {
+                } else {
                     hideUnlockDialog();
                 }
             }
@@ -126,6 +123,7 @@ public class AppsLockerService extends Service {
             e.printStackTrace();
         }
     }
+
     @Override
     public IBinder onBind(Intent intent) {
         return null;
@@ -133,16 +131,11 @@ public class AppsLockerService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        registerReceiver(broadcastReceiver, intentFilter);
-        if (intent != null) {
-
-        }
-        final Handler handler=new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                handler.postDelayed(this,t);
-                if(isAppsRunning()){
+                handler.postDelayed(this, t);
+                if (isAppsRunning()) {
 
 
                     if (imageView != null) {
@@ -153,38 +146,32 @@ public class AppsLockerService extends Service {
                         }
                     }
 
-                }else {
+                } else {
                     hideUnlockDialog();
                 }
             }
 
         }, t);
+        registerReceiver(broadcastReceiver, intentFilter);
         return START_STICKY;
     }
 
     public boolean isAppsRunning() {
-        ActivityManager activityManager = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
-        List<ActivityManager.RunningTaskInfo> taskInfo = activityManager.getRunningTasks(5);
+        pakageName = sharedPreference.getLockedListedApp();
+
         if (Build.VERSION.SDK_INT >= 21) {
             String mpackageName = activityManager.getRunningAppProcesses().get(0).processName;
-            for (int i = 0; pakageName != null && i < pakageName.size(); i++) {
-                if (mpackageName.equals(pakageName.get(i))) {
-                    currentApp = pakageName.get(i);
-
-
-                    return true;
-                }
+            if (pakageName.contains(mpackageName)) {
+                currentApp = mpackageName;
+                return true;
             }
-
         } else {
-
+            taskInfo= activityManager.getRunningTasks(10);
             if (taskInfo.size() > 0) {
                 ComponentName componentInfo = taskInfo.get(0).topActivity;
-                for (int i = 0; pakageName != null && i < pakageName.size(); i++) {
-                    if (componentInfo.getPackageName().equals(pakageName.get(i))) {
-                        currentApp = pakageName.get(i);
-                        return true;
-                    }
+                if (pakageName.contains(componentInfo.getPackageName())) {
+                    currentApp = componentInfo.getPackageName();
+                    return true;
                 }
             }
         }
@@ -200,10 +187,6 @@ public class AppsLockerService extends Service {
         if (context == null) {
             context = getApplicationContext();
         }
-        LayoutInflater layoutInflater = LayoutInflater.from(context);
-        View promptsView = layoutInflater.inflate(R.layout.popuplock, null);
-        PatternLockView patternLockView = promptsView.findViewById(R.id.patternlockview);
-
 
         dialog = new Dialog(context, android.R.style.Theme_Black_NoTitleBar_Fullscreen);
         dialog.setCanceledOnTouchOutside(false);
@@ -211,9 +194,11 @@ public class AppsLockerService extends Service {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.getWindow().setType(WindowManager.LayoutParams.TYPE_PHONE);
         dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
-        dialog.setContentView(promptsView);
+        dialog.setContentView(R.layout.popuplock);
         dialog.getWindow().setGravity(Gravity.CENTER);
         dialog.show();
+        PatternLockView patternLockView = dialog.findViewById(R.id.patternlockview);
+
         dialog.setOnKeyListener(new Dialog.OnKeyListener() {
             @Override
             public boolean onKey(DialogInterface dialog, int keyCode,
@@ -228,13 +213,12 @@ public class AppsLockerService extends Service {
 
     }
 
-    public void Home(){
+    public void Home() {
         Intent startMain = new Intent(Intent.ACTION_MAIN);
         startMain.addCategory(Intent.CATEGORY_HOME);
         startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(startMain);
         dialog.dismiss();
     }
-
 
 }

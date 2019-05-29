@@ -14,6 +14,7 @@ public class Constants {
     public static final int INSTALLED_APPS=3;
     public static final String ALL_APPS_LOCKED = "Apps_locker_all_apps_are_Locked";
     public static final String LOCKED_TYPE="apps_locker_LockType";
+    public static final String PIN_LOCK_SIZE="Pin_Lock_Size";
 
 
 }

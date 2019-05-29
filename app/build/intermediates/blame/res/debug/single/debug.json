@@ -4,32 +4,32 @@
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable/abc_btn_check_material.xml"
     },
     {
-        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_locked_apps.png.flat",
-        "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-xxxhdpi/locked_apps.png"
-    },
-    {
-        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
-        "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_48dp.png"
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
+        "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
-        "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
+        "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_48dp.png"
     },
     {
-        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/color_mtrl_btn_bg_color_selector.xml.flat",
-        "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/6889205b4150fb73a21fd4777a312424/res/color/mtrl_btn_bg_color_selector.xml"
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_locked_apps.png.flat",
+        "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-xxxhdpi/locked_apps.png"
+    },
+    {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/layout_select_dialog_item_material.xml.flat",
+        "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/layout/select_dialog_item_material.xml"
     },
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xhdpi_lock_type.png.flat",
         "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-xhdpi/lock_type.png"
     },
     {
-        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/layout_select_dialog_item_material.xml.flat",
-        "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/layout/select_dialog_item_material.xml"
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/color_mtrl_btn_bg_color_selector.xml.flat",
+        "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/6889205b4150fb73a21fd4777a312424/res/color/mtrl_btn_bg_color_selector.xml"
     },
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/color-v23_abc_tint_btn_checkable.xml.flat",
@@ -172,6 +172,10 @@
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-xhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-mdpi_switch_arrow.png.flat",
+        "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-mdpi/switch_arrow.png"
+    },
+    {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-xxhdpi-v4/abc_ic_star_half_black_48dp.png"
     },
@@ -236,6 +240,10 @@
         "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-xhdpi/appslist.png"
     },
     {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-hdpi_crossbutton.png.flat",
+        "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-hdpi/crossbutton.png"
+    },
+    {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-xhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png"
     },
@@ -256,12 +264,12 @@
         "source": "/mnt/Software/Project/AppsLocker/app/src/main/res/menu/navigation_menu.xml"
     },
     {
-        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/color_abc_tint_spinner.xml.flat",
-        "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/color/abc_tint_spinner.xml"
-    },
-    {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/color_abc_tint_spinner.xml.flat",
+        "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/color/abc_tint_spinner.xml"
     },
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-hdpi_unlock_all.png.flat",
@@ -316,12 +324,12 @@
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-ldrtl-xxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-ldpi_lock_all.png.flat",
-        "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-ldpi/lock_all.png"
-    },
-    {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_unlock_all.png.flat",
         "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-xxxhdpi/unlock_all.png"
+    },
+    {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-ldpi_lock_all.png.flat",
+        "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-ldpi/lock_all.png"
     },
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable_abc_ic_clear_material.xml.flat",
@@ -424,6 +432,10 @@
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-xxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xxhdpi_crossbutton.png.flat",
+        "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-xxhdpi/crossbutton.png"
+    },
+    {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_text_select_handle_middle_mtrl_light.png.flat",
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-xhdpi-v4/abc_text_select_handle_middle_mtrl_light.png"
     },
@@ -438,6 +450,10 @@
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-xxxhdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
+    },
+    {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xhdpi_switch_arrow.png.flat",
+        "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-xhdpi/switch_arrow.png"
     },
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable_abc_switch_thumb_material.xml.flat",
@@ -548,6 +564,10 @@
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a8d0c86bbb3aef23fa978ea2eee4fc0c/res/drawable-mdpi-v4/notification_bg_normal.9.png"
     },
     {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_switch_arrow.xml.flat",
+        "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-anydpi-v21/switch_arrow.xml"
+    },
+    {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
     },
@@ -562,6 +582,10 @@
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable_abc_ic_voice_search_api_material.xml.flat",
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable/abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_crossbutton.png.flat",
+        "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-xxxhdpi/crossbutton.png"
     },
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_launcher_background.png.flat",
@@ -668,6 +692,10 @@
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
     },
     {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/layout_singlecrossbutton.xml.flat",
+        "source": "/mnt/Software/Project/AppsLocker/app/src/main/res/layout/singlecrossbutton.xml"
+    },
+    {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/color-v23_abc_tint_spinner.xml.flat",
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/color-v23/abc_tint_spinner.xml"
     },
@@ -692,12 +720,12 @@
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-ldrtl-mdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
-        "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-hdpi-v4/abc_cab_background_top_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-xhdpi-v4/abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
+        "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-hdpi-v4/abc_cab_background_top_mtrl_alpha.9.png"
     },
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
@@ -844,12 +872,12 @@
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/6889205b4150fb73a21fd4777a312424/res/layout/design_text_input_password_icon.xml"
     },
     {
-        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable_tooltip_frame_dark.xml.flat",
-        "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable/tooltip_frame_dark.xml"
-    },
-    {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/layout_notification_template_custom_big.xml.flat",
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a8d0c86bbb3aef23fa978ea2eee4fc0c/res/layout/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable_tooltip_frame_dark.xml.flat",
+        "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable/tooltip_frame_dark.xml"
     },
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
@@ -910,6 +938,10 @@
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable_ic_mtrl_chip_close_circle.xml.flat",
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/6889205b4150fb73a21fd4777a312424/res/drawable/ic_mtrl_chip_close_circle.xml"
+    },
+    {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-ldpi_switch_arrow.png.flat",
+        "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-ldpi/switch_arrow.png"
     },
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/layout_mtrl_layout_snackbar.xml.flat",
@@ -1000,6 +1032,10 @@
         "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-ldpi/locked_apps.png"
     },
     {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/layout_singlenumber.xml.flat",
+        "source": "/mnt/Software/Project/AppsLocker/app/src/main/res/layout/singlenumber.xml"
+    },
+    {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png"
     },
@@ -1042,6 +1078,10 @@
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-hdpi_switch_arrow.png.flat",
+        "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-hdpi/switch_arrow.png"
     },
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -1256,6 +1296,10 @@
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-xxhdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
     },
     {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_switch_arrow.png.flat",
+        "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-xxxhdpi/switch_arrow.png"
+    },
+    {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-hdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
@@ -1370,6 +1414,10 @@
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a8d0c86bbb3aef23fa978ea2eee4fc0c/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-mdpi_crossbutton.png.flat",
+        "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-mdpi/crossbutton.png"
     },
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_star_black_36dp.png.flat",
@@ -1808,6 +1856,10 @@
         "source": "/mnt/Software/Project/AppsLocker/app/src/main/res/drawable/green_normal.png"
     },
     {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-ldpi_crossbutton.png.flat",
+        "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-ldpi/crossbutton.png"
+    },
+    {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-mdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png"
     },
@@ -1996,6 +2048,10 @@
         "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-xxxhdpi/lock_type.png"
     },
     {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_crossbutton.xml.flat",
+        "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-anydpi-v21/crossbutton.xml"
+    },
+    {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/color_abc_primary_text_material_light.xml.flat",
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/color/abc_primary_text_material_light.xml"
     },
@@ -2010,6 +2066,10 @@
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-xhdpi-v4/abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xhdpi_crossbutton.png.flat",
+        "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-xhdpi/crossbutton.png"
     },
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-watch-v20_abc_dialog_material_background.xml.flat",
@@ -2030,6 +2090,10 @@
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/anim_abc_tooltip_exit.xml.flat",
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/anim/abc_tooltip_exit.xml"
+    },
+    {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xxhdpi_switch_arrow.png.flat",
+        "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-xxhdpi/switch_arrow.png"
     },
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
@@ -2098,6 +2162,14 @@
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-hdpi-v4/abc_scrubber_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable_roundbuttonback.xml.flat",
+        "source": "/mnt/Software/Project/AppsLocker/app/src/main/res/drawable/roundbuttonback.xml"
+    },
+    {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable_textviewback.xml.flat",
+        "source": "/mnt/Software/Project/AppsLocker/app/src/main/res/drawable/textviewback.xml"
     },
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
@@ -2208,6 +2280,10 @@
         "source": "/mnt/Software/Project/AppsLocker/app/build/generated/res/pngs/debug/drawable-anydpi-v21/appslist.xml"
     },
     {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/layout_singlearrowbutton.xml.flat",
+        "source": "/mnt/Software/Project/AppsLocker/app/src/main/res/layout/singlearrowbutton.xml"
+    },
+    {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/layout_design_navigation_menu_item.xml.flat",
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/6889205b4150fb73a21fd4777a312424/res/layout/design_navigation_menu_item.xml"
     },
@@ -2230,6 +2306,10 @@
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
         "source": "/home/pallob/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/68c8df0f509ae89d7643d485e7d80304/res/drawable-xhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/layout_confirmpin.xml.flat",
+        "source": "/mnt/Software/Project/AppsLocker/app/src/main/res/layout/confirmpin.xml"
     },
     {
         "merged": "/mnt/Software/Project/AppsLocker/app/build/intermediates/res/merged/debug/drawable_abc_ic_go_search_api_material.xml.flat",

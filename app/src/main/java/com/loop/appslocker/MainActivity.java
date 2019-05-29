@@ -2,6 +2,7 @@ package com.loop.appslocker;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -13,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -53,13 +55,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     ArrayList<Apps> list;
     Intent intent;
     Dialog dialog;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //  OpeningDialog();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         sharedPreference = new SharedPreference(this);
+        intent = new Intent(MainActivity.this, AppsLockerService.class);
         apps = new Apps(this);
         drawerLayout = findViewById(R.id.drawerlayout);
         navigationView = findViewById(R.id.navigationView);
@@ -158,16 +160,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        intent = new Intent(MainActivity.this, AppsLockerService.class);
+
         if (isChecked) {
             buttonView.setText("Locked");
             textViewlock.setBackgroundResource(R.drawable.lock_all);
-            sharedPreference.On();
+            sharedPreference.setRunning(true);
             startService(intent);
         } else {
             buttonView.setText("Unlocked");
             textViewlock.setBackgroundResource(R.drawable.unlock_all);
-            sharedPreference.Off();
+            sharedPreference.setRunning(false);
             stopService(intent);
         }
 
@@ -199,6 +201,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void Back() {
         clearApps();
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+
+
     public void clearApps() {
         for (int i = 0; i < getSupportFragmentManager().getBackStackEntryCount(); i++) {
             getSupportFragmentManager().popBackStack();

@@ -1012,6 +1012,7 @@ drawable black_normal
 drawable blue_highlighted
 drawable blue_normal
 drawable change_pin
+drawable crossbutton
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1047,9 +1048,12 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable red_highlighted
 drawable red_normal
+drawable roundbuttonback
 drawable settings
 drawable strack
+drawable switch_arrow
 drawable switchback
+drawable textviewback
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable transparent
@@ -1060,6 +1064,7 @@ id ALT
 id CTRL
 id FUNCTION
 id META
+id PinTextView
 id SHIFT
 id SYM
 id about
@@ -1088,6 +1093,7 @@ id all
 id all_apps
 id always
 id appsCategorieTextView
+id arrowbutton
 id async
 id auto
 id barrier
@@ -1106,7 +1112,9 @@ id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id conTextVieType
 id confirmPatternLockView
+id confirmPinLockView
 id confirm_back
 id constraintLayout
 id container
@@ -1114,7 +1122,10 @@ id content
 id contentPanel
 id coordinator
 id createPatternLockView
+id createPinLockView
+id createPinShow
 id createText32
+id crossButton
 id custom
 id customPanel
 id decor_content_parent
@@ -1173,7 +1184,6 @@ id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
-id mypin
 id navigationView
 id navigation_header_container
 id never
@@ -1182,6 +1192,7 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id numberButton
 id outline
 id packed
 id parallax
@@ -1192,6 +1203,8 @@ id pattern_cancel
 id patternlockview
 id percent
 id pin
+id pinConfirmShow
+id pincontext
 id progress_circular
 id progress_horizontal
 id radio
@@ -1260,6 +1273,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
+id textView4
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1340,6 +1354,7 @@ layout about
 layout activity_main
 layout appscategories
 layout confirmpattern
+layout confirmpin
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1372,6 +1387,9 @@ layout setpatternlock
 layout setpinlock
 layout settings
 layout singleappsview
+layout singlearrowbutton
+layout singlecrossbutton
+layout singlenumber
 layout support_simple_spinner_dropdown_item
 menu navigation_menu
 menu top
@@ -1430,9 +1448,12 @@ string character_counter_content_description
 string character_counter_pattern
 string confirm
 string confirm_pattern
+string confirm_pin
 string create_pattern
+string create_pin
 string draw_pattern
 string draw_to_confirm
+string enter_your_pin
 string exit
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
@@ -1448,10 +1469,12 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string search_menu_title
+string set_your_pin_code
 string settings
 string status_bar_notification_info_overflow
 string system_apps
 string systemappsname
+string type_your_pin_again
 string unlock_all
 string unlocked
 style AlertDialog_AppCompat

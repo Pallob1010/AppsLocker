@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/home/pallob/LinuxSoft/android-studio/plugins/android/lib/android.jar!/images/material_design_icons/device/ic_screen_lock_portrait_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/home/pallob/LinuxSoft/android-studio/plugins/android/lib/android.jar!/images/material_design_icons/navigation/ic_cancel_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,8 +28,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="e51410" />
-                            <entry key="outputName" value="lock_type" />
+                            <entry key="color" value="43e519" />
+                            <entry key="outputName" value="crossbutton" />
                             <entry key="sourceFile" value="$USER_HOME$" />
                           </map>
                         </option>
