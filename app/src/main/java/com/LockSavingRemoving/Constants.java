@@ -15,6 +15,13 @@ public class Constants {
     public static final String ALL_APPS_LOCKED = "Apps_locker_all_apps_are_Locked";
     public static final String LOCKED_TYPE="apps_locker_LockType";
     public static final String PIN_LOCK_SIZE="Pin_Lock_Size";
+    public static final String PATTERN_SIZE="Pattern_LOCK_Size";
+    public static final String PATTERN_DOT="Pattern_DOT_COLOR";
+    public static final String PATTERN_HIGHLIGHTED="Pattern_HighLighted_Color";
+    public static final String PATTERN_LINE="Pattern_LINE_Color";
+    public static final String PATTERN_LINE_SIZE="Pattern_LINE_SIZE";
+    public static final String Checked_State="Checked_State_12345";
+    public static final String VISIBILITY="Pattern_Visibility_1234567890";
 
 
 }

@@ -14,29 +14,30 @@ import android.util.Pair;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-
+import com.LockSavingRemoving.SharedPreference;
 import com.loop.appslocker.R;
-
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class PatternLockView extends ViewGroup {
     private Paint paint;
+    private Context context;
     private Bitmap bitmap;
     private Canvas canvas;
     private List<Pair<NodeView, NodeView>> lineList;
     private NodeView currentNode;
     private StringBuilder stringbuilder;
     private CallBack callBack;
+    private SharedPreference sP;
     private int patternLockSize;
     private int nodeSrc, nodeOnSrc;
-    private int normal[] = {R.drawable.white_normal, R.drawable.green_normal, R.drawable.blue_normal, R.drawable.red_normal, R.drawable.black_normal};
-    private int highlighted[] = {R.drawable.white_highlight, R.drawable.green_high_lighted, R.drawable.blue_highlighted, R.drawable.red_highlighted, R.drawable.black_highlight};
-
+    private int lineWidth;
+    private int lineColor;
 
     public PatternLockView(Context context) {
         this(context, null);
+
     }
 
     public PatternLockView(Context context, AttributeSet attrs) {
@@ -50,16 +51,12 @@ public class PatternLockView extends ViewGroup {
 
     public PatternLockView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr);
+        this.context=context;
+        sP=new SharedPreference(context);
         initFromAttributes(attrs, defStyleAttr);
     }
 
-    public void setNodeAtNormal(int position) {
-        this.nodeSrc = normal[position];
-    }
 
-    public void setNodeOnHighlighted(int position) {
-        this.nodeOnSrc = highlighted[position];
-    }
 
     private int getNodeSource() {
         return nodeSrc;
@@ -73,21 +70,22 @@ public class PatternLockView extends ViewGroup {
         return patternLockSize * patternLockSize;
     }
 
-    public void setPatternLockSize(int patternLockSize) {
-        this.patternLockSize = patternLockSize;
-    }
 
     private void initFromAttributes(AttributeSet attrs, int defStyleAttr) {
-        final TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.PatternLockView, defStyleAttr, 0);
-        patternLockSize = a.getInt(R.styleable.PatternLockView_patternSize, 3);
-        nodeSrc = a.getResourceId(R.styleable.PatternLockView_nodeSrc, R.drawable.white_normal);
-        nodeOnSrc = a.getResourceId(R.styleable.PatternLockView_nodeOnSrc, R.drawable.white_highlight);
-        int lineColor = Color.argb(0, 0, 0, 0);
-        lineColor = a.getColor(R.styleable.PatternLockView_lineColor, lineColor);
-        float lineWidth = 20.0f;
-        lineWidth = a.getDimension(R.styleable.PatternLockView_lineWidth, lineWidth);
+        patternLockSize =sP.patternSize();
+        nodeSrc = sP.patternDot();
+        if (sP.patternVisibility().equals("invisible")){
+            nodeOnSrc=sP.patternDot();
+            lineColor=Color.TRANSPARENT;
+            lineWidth=sP.patternLineSize();
 
-        a.recycle();
+        }else {
+            nodeOnSrc =sP.patternHighlighted();
+            lineColor = Color.parseColor(sP.patternLineColor());
+            lineWidth = sP.patternLineSize();
+
+        }
+
 
         paint = new Paint(Paint.DITHER_FLAG);
         paint.setStyle(Style.STROKE);
@@ -164,7 +162,6 @@ public class PatternLockView extends ViewGroup {
                         nodeAt.setHighLighted(true);
                         Pair<NodeView, NodeView> pair = new Pair<NodeView, NodeView>(currentNode, nodeAt);
                         lineList.add(pair);
-
                         currentNode = nodeAt;
                         stringbuilder.append(currentNode.getNum());
                     }

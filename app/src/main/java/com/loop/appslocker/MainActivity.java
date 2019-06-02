@@ -1,6 +1,7 @@
 package com.loop.appslocker;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -57,7 +59,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     Dialog dialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //  OpeningDialog();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         sharedPreference = new SharedPreference(this);
@@ -227,21 +228,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             aSwitch.setChecked(true);
             aSwitch.setText("Locked");
             textViewlock.setBackgroundResource(R.drawable.lock_all);
+            startService(intent);
         } else {
             aSwitch.setChecked(false);
             aSwitch.setText("Unlocked");
             textViewlock.setBackgroundResource(R.drawable.unlock_all);
+            stopService(intent);
         }
 
 
     }
 
     public void SetLockType() {
+        DisplayMetrics metrics = getResources().getDisplayMetrics();
+        int width = metrics.widthPixels;
         dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setCanceledOnTouchOutside(true);
         dialog.setContentView(R.layout.locktype);
         dialog.getWindow().setGravity(Gravity.CENTER);
+        dialog.getWindow().setLayout((width*6)/7, WindowManager.LayoutParams.WRAP_CONTENT);
         dialog.show();
         RadioGroup radioGroup = dialog.findViewById(R.id.radioLock);
         radioGroup.setOnCheckedChangeListener(this);
@@ -260,7 +266,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     public void Settings() {
         clearApps();
-        Settings settings = new Settings();
+        Settings settings = new Settings(this,sharedPreference);
         fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frameLayout, settings);

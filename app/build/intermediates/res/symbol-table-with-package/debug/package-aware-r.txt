@@ -569,9 +569,19 @@ bool abc_allow_stacked_button_bar
 bool abc_config_actionMenuItemAllCaps
 bool mtrl_btn_textappearance_all_caps
 color Ash
+color Black
+color Blue
+color Blue_Light
+color Green
+color Light_Green
 color Mild_Black
+color Orange
+color Purple
+color Red
+color Red_Light
 color Venta_Black
 color White
+color Yellow
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -1049,6 +1059,7 @@ drawable notify_panel_notification_icon_bg
 drawable red_highlighted
 drawable red_normal
 drawable roundbuttonback
+drawable selected
 drawable settings
 drawable strack
 drawable switch_arrow
@@ -1058,6 +1069,7 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable transparent
 drawable unlock_all
+drawable verticalseperator
 drawable white_highlight
 drawable white_normal
 id ALT
@@ -1067,6 +1079,7 @@ id META
 id PinTextView
 id SHIFT
 id SYM
+id SizeListView
 id about
 id action_bar
 id action_bar_activity_content
@@ -1112,6 +1125,7 @@ id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id colorField
 id conTextVieType
 id confirmPatternLockView
 id confirmPinLockView
@@ -1128,6 +1142,7 @@ id createText32
 id crossButton
 id custom
 id customPanel
+id dataTextView
 id decor_content_parent
 id default_activity_button
 id design_bottom_sheet
@@ -1168,6 +1183,7 @@ id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id jklop
 id labeled
 id largeLabel
 id left
@@ -1239,10 +1255,15 @@ id selected
 id setPatternRoot
 id setPinRoot
 id settings
+id settingsListView
+id settingsOptions
+id settingsRoot
+id settingsTitle
 id shortcut
 id showCustom
 id showHome
 id showTitle
+id singleradio
 id smallLabel
 id snackbar_action
 id snackbar_text
@@ -1282,6 +1303,7 @@ id textofConfirm
 id time
 id title
 id titleDividerNoCustom
+id titleTextView
 id title_template
 id toggleSwitch
 id top
@@ -1370,6 +1392,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout header
+layout layoutthree
 layout locktype
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
@@ -1389,7 +1412,9 @@ layout settings
 layout singleappsview
 layout singlearrowbutton
 layout singlecrossbutton
+layout singleglobalview
 layout singlenumber
+layout singlesettingsview
 layout support_simple_spinner_dropdown_item
 menu navigation_menu
 menu top

@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.util.SparseBooleanArray;
 
 import com.google.gson.Gson;
+import com.loop.appslocker.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -86,8 +87,29 @@ public class SharedPreference {
     public int pinLockSize() {
         return (context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE).getInt(Constants.PIN_LOCK_SIZE, 4));
     }
+    public int patternSize() {
+        return (context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE).getInt(Constants.PATTERN_SIZE, 3));
+    }
 
+    public int patternDot(){
+        return (context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE).getInt(Constants.PATTERN_DOT, R.drawable.white_normal));
+    }
 
+    public int patternHighlighted(){
+        return (context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE).getInt(Constants.PATTERN_HIGHLIGHTED, R.drawable.white_highlight));
+    }
+
+    public String patternLineColor(){
+        return (context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE).getString(Constants.PATTERN_LINE,"#000000"));
+    }
+    public int patternLineSize(){
+        return (context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE).getInt(Constants.PATTERN_LINE_SIZE, 15));
+    }
+
+    public String patternVisibility(){
+        return (context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE).getString(Constants.VISIBILITY,"visible"));
+
+    }
 
     /////////////////////////////////////////////////////////////Setters Method/////////////////////////////////////////////////////////////////////////
 
@@ -178,6 +200,36 @@ public class SharedPreference {
     public void setPinLockSize(int size) {
         SharedPreferences.Editor editor = context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE).edit();
         editor.putInt(Constants.PIN_LOCK_SIZE, size).commit();
+    }
+
+
+    public void setPatternSize(int size) {
+        SharedPreferences.Editor editor = context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE).edit();
+        editor.putInt(Constants.PATTERN_SIZE, size).commit();
+    }
+
+    public void setPatternDot(int position){
+        SharedPreferences.Editor editor = context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE).edit();
+        editor.putInt(Constants.PATTERN_DOT,position).commit();
+    }
+    public void setPatternHighLighted(int position){
+        SharedPreferences.Editor editor = context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE).edit();
+        editor.putInt(Constants.PATTERN_HIGHLIGHTED,position).commit();
+    }
+
+    public void setPatternLineColor(String color){
+        SharedPreferences.Editor editor = context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE).edit();
+        editor.putString(Constants.PATTERN_LINE,color).commit();
+    }
+
+
+    public void setPatternLineSize(int size){
+        SharedPreferences.Editor editor = context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE).edit();
+        editor.putInt(Constants.PATTERN_LINE_SIZE,size).commit();
+    }
+    public void setVisibility(String visibility){
+        SharedPreferences.Editor editor = context.getSharedPreferences(Constants.APPS_PREFERENCE, Context.MODE_PRIVATE).edit();
+        editor.putString(Constants.VISIBILITY,visibility).commit();
     }
 
 

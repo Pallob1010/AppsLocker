@@ -15,19 +15,14 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.view.Gravity;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
-import android.widget.Toast;
-
 import com.LockSavingRemoving.SharedPreference;
 import com.lock.PatternLockView;
-
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class AppsLockerService extends Service {
     public static String currentApp = "";
@@ -64,8 +59,8 @@ public class AppsLockerService extends Service {
         activityManager = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
             params = new WindowManager.LayoutParams(
-                    WindowManager.LayoutParams.WRAP_CONTENT,
-                    WindowManager.LayoutParams.WRAP_CONTENT,
+                    WindowManager.LayoutParams.MATCH_PARENT,
+                    WindowManager.LayoutParams.MATCH_PARENT,
                     WindowManager.LayoutParams.TYPE_SYSTEM_OVERLAY,
                     WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
                     PixelFormat.TRANSLUCENT);
@@ -131,27 +126,6 @@ public class AppsLockerService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                handler.postDelayed(this, t);
-                if (isAppsRunning()) {
-
-
-                    if (imageView != null) {
-                        if (!currentApp.matches(previousApp)) {
-
-                            showUnlockDialog();
-                            previousApp = currentApp;
-                        }
-                    }
-
-                } else {
-                    hideUnlockDialog();
-                }
-            }
-
-        }, t);
         registerReceiver(broadcastReceiver, intentFilter);
         return START_STICKY;
     }

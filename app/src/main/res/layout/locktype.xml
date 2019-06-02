@@ -1,36 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="250dp"
-    android:layout_height="130dp"
-    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
     android:layout_gravity="center"
-    android:weightSum="10"
 
 
- >
+    >
 
     <TextView
-        android:background="@android:color/holo_orange_light"
-        android:layout_weight="1"
+        android:id="@+id/jklop"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_height="45dp"
+        android:background="@android:color/holo_orange_light"
         android:gravity="center"
         android:text="Set Lock Type"
         android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-       />
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioLock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
         android:id="@+id/radioLock"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="9">
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jklop">
+
+        <RadioButton
+            android:id="@+id/radioPin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pin Lock"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
 
         <RadioButton
 
@@ -41,15 +52,6 @@
             android:textColor="@android:color/black"
             android:textStyle="bold" />
 
-        <RadioButton
-            android:id="@+id/radioPin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Pin Lock"
-            android:textColor="@android:color/black"
-
-            android:textStyle="bold" />
-
     </RadioGroup>
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
